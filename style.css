@@ -169,7 +169,7 @@ body.dark-theme footer {
   right: 20px; /* Posição à direita */
   display: flex;
   flex-direction: column;  /* Alinhando os botões em uma coluna */
-  gap: 8px;  /* Espaçamento entre os botões */
+  gap: 10px;  /* Espaçamento entre os botões */
   z-index: 1000;  /* Para garantir que fiquem sobre outros elementos */
 }
 
@@ -177,12 +177,11 @@ body.dark-theme footer {
   background-color: #333;  /* Cor de fundo inicial */
   color: white;  /* Cor do texto */
   border: none;
-  padding: 6px 12px;  /* Tamanho reduzido */
+  padding: 10px 20px;
   cursor: pointer;
-  font-size: 12px;  /* Fonte menor */
+  font-size: 16px;
   border-radius: 5px;
   transition: background-color 0.3s ease, transform 0.3s ease;  /* Suaviza as transições */
-  width: 150px; /* Largura fixa para os botões */
 }
 
 /* Efeito hover para os botões */
