@@ -89,11 +89,9 @@ img:hover {
 h1, h2 {
   font-family: 'Roboto', sans-serif; /* Fonte mais moderna */
   font-weight: bold;
-  text-transform: uppercase;
+  text-transform: uppercase; /* Aplicando transformação para maiúsculas */
 }
 
-  text-transform: uppercase;
-}
 /* Estilizando o botão do WhatsApp */
 .whatsapp-btn {
   background-color: #25D366; /* Cor do WhatsApp */
@@ -113,12 +111,9 @@ h1, h2 {
 
 .whatsapp-btn:focus {
   outline: none;
-  .whatsapp-button {
-  transition: transform 0.3s ease-in-out;
 }
 
-.whatsapp-button:hover {
+/* Efeito de transição e aumento no botão */
+.whatsapp-btn:hover {
   transform: scale(1.1); /* Aumenta o botão ao passar o mouse */
-}
-
 }
