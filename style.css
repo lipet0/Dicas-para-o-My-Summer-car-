@@ -111,15 +111,26 @@ h1, h2 {
 
 /* Estilizando o botão do WhatsApp */
 .whatsapp-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Espaço entre o ícone e o texto */
   background-color: #25D366; /* Cor do WhatsApp */
   color: #fff;
-  font-size: 16px;
-  padding: 10px 20px;
+  font-size: 18px;
+  padding: 12px 24px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
+  font-weight: bold;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Ícone dentro do botão */
+.whatsapp-btn img.whatsapp-icon {
+  width: 24px;
+  height: 24px;
 }
 
 /* Botão do WhatsApp no tema escuro */
@@ -128,12 +139,14 @@ body.dark-theme .whatsapp-btn {
 }
 
 .whatsapp-btn:hover {
-  background-color: #128C7E; /* Cor quando o botão for hover */
+  background-color: #128C7E;
+  transform: scale(1.05); /* Efeito de leve aumento */
 }
 
 .whatsapp-btn:focus {
   outline: none;
 }
+
 
 /* Efeito de transição e aumento no botão */
 .whatsapp-btn:hover {
