@@ -22,8 +22,8 @@ body.light-theme {
 
 /* Tema Escuro */
 body.dark-theme {
-  background-color: #333;
-  color: #fff;
+  background-color: #121212; /* Cor de fundo mais escura */
+  color: #e0e0e0; /* Cor do texto mais clara */
 }
 
 /* Ajustando o cabeçalho */
@@ -37,10 +37,21 @@ header {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra no texto */
 }
 
+/* Ajustando o cabeçalho para o tema escuro */
+body.dark-theme header {
+  background-color: #1f1f1f;  /* Cor de fundo do cabeçalho mais escura */
+  color: #e0e0e0;  /* Texto claro no cabeçalho */
+}
+
 /* Estilizando os links */
 a {
   color: #333;
   text-decoration: none;
+}
+
+/* Estilizando os links no tema escuro */
+body.dark-theme a {
+  color: #80cbc4;  /* Cor dos links em um tom mais suave */
 }
 
 /* Melhorando a exibição das imagens */
@@ -66,6 +77,12 @@ img:hover {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajustando o fundo da área principal (container) para o tema escuro */
+body.dark-theme .container {
+  background-color: #2c2c2c;  /* Fundo mais escuro para o container */
+  color: #e0e0e0;  /* Texto claro dentro do container */
 }
 
 /* Responsividade: layout em coluna para celulares */
@@ -103,6 +120,11 @@ h1, h2 {
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease;
+}
+
+/* Botão do WhatsApp no tema escuro */
+body.dark-theme .whatsapp-btn {
+  background-color: #128C7E; /* Cor do WhatsApp ajustada para contraste */
 }
 
 .whatsapp-btn:hover {
