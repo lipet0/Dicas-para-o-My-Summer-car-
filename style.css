@@ -14,6 +14,18 @@ body {
   font-size: 18px; /* Melhorando o tamanho da fonte */
 }
 
+/* Tema Claro */
+body.light-theme {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Tema Escuro */
+body.dark-theme {
+  background-color: #333;
+  color: #fff;
+}
+
 /* Ajustando o cabeçalho */
 header {
   background-color: #333;
@@ -77,5 +89,8 @@ img:hover {
 h1, h2 {
   font-family: 'Roboto', sans-serif; /* Fonte mais moderna */
   font-weight: bold;
+  text-transform: uppercase;
+}
+
   text-transform: uppercase;
 }
