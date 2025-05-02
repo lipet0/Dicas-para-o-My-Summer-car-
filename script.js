@@ -32,3 +32,18 @@ loadTheme();
 
 // Suponha que você tenha um botão para alternar entre os temas
 document.getElementById('theme-toggle-btn').addEventListener('click', toggleTheme);
+
+// Código para navegação suave
+const buttons = document.querySelectorAll('.navigate-btn');
+
+// Adicionar o evento de clique para cada botão
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    // Pegar o alvo do botão
+    const targetId = button.getAttribute('data-target');
+    
+    // Encontrar o elemento de destino (div) e rolar até ele
+    const targetElement = document.getElementById(targetId);
+    targetElement.scrollIntoView({ behavior: 'smooth' });
+  });
+});
