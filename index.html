@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Summer Car: Guia Completo para Iniciantes</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Adicionando o link para o arquivo CSS -->
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -95,8 +95,8 @@
             color: #333;
         }
 
-        /* Estilo para os novos botões */
-        .action-buttons {
+        /* Estilo dos botões para alternar entre as seções */
+        .section-toggle-btns {
             position: fixed;
             top: 80px;
             right: 20px;
@@ -105,86 +105,115 @@
             gap: 10px;
         }
 
-        .action-buttons button {
+        .section-toggle-btns button {
             background-color: #333;
             color: white;
+            padding: 6px 12px;
             border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            font-size: 16px;
             border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: background-color 0.3s;
         }
 
-        .action-buttons button:hover {
+        .section-toggle-btns button:hover {
             background-color: #555;
         }
 
+        .section-toggle-btns button.dark-mode {
+            background-color: #fff;
+            color: #333;
+        }
     </style>
 </head>
 <body>
     <button id="theme-toggle">Alternar Tema</button>
-
-    <!-- Novos botões -->
-    <div class="action-buttons">
-        <button onclick="location.href='#passos'">1. Primeiros Passos</button>
-        <button onclick="location.href='#montagem'">2. Montagem do Carro</button>
-        <button onclick="location.href='#manutencao'">3. Manutenção e Sobrevivência</button>
-        <button onclick="location.href='#trabalhos'">4. Trabalhos e Grana</button>
-        <button onclick="location.href='#dicas'">5. Dicas Rápidas</button>
-        <button onclick="location.href='#dirigindo'">6. Dirigindo por aí</button>
-        <button onclick="location.href='#personalizacao'">7. Personalizando o Satsuma</button>
-        <button onclick="location.href='#habilidade'">8. Aumentando sua habilidade de mecânica</button>
-        <button onclick="location.href='#caos'">9. Sobrevivendo ao Caos</button>
+    
+    <!-- Botões para alternar entre as seções -->
+    <div class="section-toggle-btns">
+        <button onclick="scrollToSection('section-1')">1. Primeiros Passos</button>
+        <button onclick="scrollToSection('section-2')">2. Montagem do Carro</button>
+        <button onclick="scrollToSection('section-3')">3. Manutenção e Sobrevivência</button>
+        <button onclick="scrollToSection('section-4')">4. Trabalhos e Grana</button>
+        <button onclick="scrollToSection('section-5')">5. Dicas Rápidas</button>
+        <button onclick="scrollToSection('section-6')">6. Dirigindo por aí</button>
+        <button onclick="scrollToSection('section-7')">7. Personalizando o Satsuma</button>
+        <button onclick="scrollToSection('section-8')">8. Aumentando sua habilidade de mecânica</button>
+        <button onclick="scrollToSection('section-9')">9. Sobrevivendo ao Caos</button>
     </div>
-
+    
     <img id="top-image" src="imagens/0.jpg" alt="Imagem do topo">
     <div class="container">
         <h1>My Summer Car: Guia Completo para Iniciantes</h1>
         <p>Se você está começando em <strong>My Summer Car</strong>, este é o guia ideal para te ajudar a entender cada detalhe importante deste simulador finlandês de sobrevivência, mecânica e caos automotivo. Com uma curva de aprendizado íngreme e muitos elementos interligados, este jogo testa sua paciência, dedicação e habilidades de observação. Desde o momento em que você acorda na casa de seus pais até completar a montagem do famoso Satsuma, cada passo exige atenção. Este guia foi feito pensando em você que quer aproveitar ao máximo a experiência.</p>
         <img class="guide-images" src="imagens/1.jpg" alt="Introdução ao Jogo">
-        <h2 id="passos">1. Primeiros Passos</h2>
-        <p>Ao iniciar o jogo...</p>
-        <img class="guide-images" src="imagens/2.jpg" alt="Primeiros Passos">
-        <h2 id="montagem">2. Montagem do Carro</h2>
-        <p>A montagem do Satsuma...</p>
-        <img class="guide-images" src="imagens/3.jpg" alt="Montagem do Carro">
-        <h2 id="manutencao">3. Manutenção e Sobrevivência</h2>
-        <p>O personagem precisa comer...</p>
-        <img class="guide-images" src="imagens/4.jpg" alt="Manutenção e Sobrevivência">
-        <h2 id="trabalhos">4. Trabalhos e Grana</h2>
-        <p>Dinheiro é essencial no jogo...</p>
-        <h2 id="dicas">5. Dicas Rápidas</h2>
-        <ul>
-            <li><strong class="tip-title">Salve o jogo:</strong> Use o banheiro para salvar...</li>
-        </ul>
-        <img class="guide-images" src="imagens/5.jpg" alt="Indicadores de Saúde">
-        <h2 id="dirigindo">6. Dirigindo por aí</h2>
-        <p>Dirigir é uma parte fundamental da experiência...</p>
-        <img class="guide-images" src="imagens/6.jpg" alt="Dirigindo o carro">
-        <h2 id="personalizacao">7. Personalizando o Satsuma</h2>
-        <p>Conforme você ganha dinheiro...</p>
-        <img class="guide-images" src="imagens/7.jpg" alt="Personalização do Satsuma">
-        <h2 id="habilidade">8. Aumentando sua habilidade de mecânica</h2>
-        <p>Com o tempo, você ficará mais rápido...</p>
-        <img class="guide-images" src="imagens/8.jpg" alt="Aumentando a habilidade de mecânica">
-        <h2 id="caos">9. Sobrevivendo ao Caos</h2>
-        <p>My Summer Car não é para qualquer um...</p>
-        <img class="guide-images" src="imagens/9.jpg" alt="Sobrevivendo ao Caos">
-    </div>
-    <footer>
-        <button class="button" onclick="window.location.href = 'https://wa.me/5511967339208';">Fale no WhatsApp</button>
-    </footer>
-    <script>
-        const themeToggle = document.getElementById('theme-toggle');
-        const body = document.body;
-        const container = document.querySelector('.container');
+        
+        <div id="section-1">
+            <h2>1. Primeiros Passos</h2>
+            <p>Ao iniciar o jogo, você acorda em uma casa simples, no meio da zona rural da Finlândia. O silêncio ao redor, o rádio finlandês tocando músicas aleatórias e a bagunça da sua garagem logo mostram que o jogo será tão cômico quanto desafiador. A primeira coisa a se fazer é explorar a casa e entender o funcionamento do HUD, que mostra indicadores como sede, fome, urina, stress, sujidade, fadiga e saúde. Esses elementos são fundamentais para sua sobrevivência. Lembre-se: morrer significa perder todo o progresso caso você não tenha salvo. Então, familiarize-se com o ambiente e aprenda a cuidar de você mesmo antes de sair para aventuras maiores.</p>
+        </div>
 
-        themeToggle.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
-            container.classList.toggle('dark-mode');
-            themeToggle.classList.toggle('dark-mode');
-            themeToggle.textContent = body.classList.contains('dark-mode') ? 'Alternar para Tema Claro' : 'Alternar Tema';
+        <div id="section-2">
+            <h2>2. Montagem do Carro</h2>
+            <p>A montagem do Satsuma é o coração do jogo. Todas as peças estão disponíveis na garagem, mas não há instruções no jogo — você precisa saber o que fazer, na ordem certa. São dezenas de parafusos, peças, ajustes e testes. Montar o carro não é apenas colocar as peças — é entender como um motor de combustão funciona. Você vai precisar instalar o bloco do motor, o virabrequim, pistões, cabeçote, carburador, sistema de escape, suspensão, direção, e por aí vai. Prepare-se para errar, desmontar e tentar de novo. Ter um guia de montagem ou vídeos abertos pode ser um grande auxílio. E lembre-se: torque errado, peças mal colocadas ou esquecidas resultarão em problemas sérios na hora de dar a partida no carro.</p>
+        </div>
+
+        <div id="section-3">
+            <h2>3. Manutenção e Sobrevivência</h2>
+            <p>O personagem precisa comer, dormir, urinar, tomar banho e relaxar. Alimentos estão na geladeira, mas tudo acaba — é preciso ir até a cidade para reabastecer. Para tomar banho, entre no chuveiro. Para reduzir o stress, você pode beber, fumar, tomar café ou usar a sauna. Se negligenciar qualquer uma dessas necessidades, a consequência pode ser a morte. Por isso, mantenha uma rotina equilibrada, e sempre pense duas vezes antes de dirigir com sono ou embriagado. O jogo não perdoa erros, e um pequeno descuido pode acabar em acidente fatal — literalmente.</p>
+        </div>
+
+        <div id="section-4">
+            <h2>4. Trabalhos e Grana</h2>
+            <p>Dinheiro é essencial no jogo, principalmente para comprar peças de carro, mantimentos e gasolina. Há diversas formas de ganhar dinheiro honestamente: entregas de lenha, limpar fossas sépticas com o caminhão-tanque, entre outros. Cada trabalho tem sua dificuldade e risco, mas também recompensa bem. Trabalhar é uma maneira de explorar mais do mapa, conhecer NPCs e, claro, juntar grana para turbinar seu Satsuma com upgrades como carburador de corrida, radiador novo, suspensão esportiva, etc. E atenção: bater o carro pode gerar custos altos de reparo.</p>
+        </div>
+
+        <div id="section-5">
+            <h2>5. Dicas Rápidas</h2>
+            <ul>
+                <li><strong class="tip-title">Salve o jogo:</strong> Use o banheiro para salvar. Salvar após conquistas importantes evita frustrações.</li>
+                <li><strong class="tip-title">Evite morrer:</strong> Não coma comidas estragadas, não durma no meio da estrada, e não dirija bêbado.</li>
+                <li><strong class="tip-title">Fique atento ao inventário:</strong> Carregue chaves de boca, óleo, gasolina e peças de reposição quando for longe.</li>
+                <li><strong class="tip-title">Estude a mecânica:</strong> Saber como funciona um motor é quase obrigatório para jogar bem. Pesquise fora do jogo se necessário.</li>
+            </ul>
+        </div>
+
+        <div id="section-6">
+            <h2>6. Dirigindo por aí</h2>
+            <p>Dirigir é uma parte fundamental da experiência. A direção é realista, sem assistência de volante ou GPS. Para os iniciantes, pode ser difícil manter o controle, mas com prática, você vai se acostumar. O carro tem uma velocidade razoável, mas é importante sempre checar o nível de combustível. Também é essencial saber quando parar para descansar e não exagerar nas longas viagens sem abastecer.</p>
+        </div>
+
+        <div id="section-7">
+            <h2>7. Personalizando o Satsuma</h2>
+            <p>O Satsuma pode ser customizado de diversas maneiras, como aparência externa, suspensão, motor e mais. A personalização vai desde a troca de peças para melhorar o desempenho, até a pintura do carro. A estética é importante não só para seu gosto pessoal, mas também para o jogo em si — muitas vezes, é necessário andar com o carro bem ajustado para concluir missões com sucesso.</p>
+        </div>
+
+        <div id="section-8">
+            <h2>8. Aumentando sua habilidade de mecânica</h2>
+            <p>Para realizar uma boa montagem do carro, você precisa aumentar sua habilidade mecânica. Pratique mais, aprenda com os erros e acertos, e busque eficiência no trabalho. Quanto mais você aprende, mais peças pode substituir e mais facilmente consegue reparar o carro sem causar danos.</p>
+        </div>
+
+        <div id="section-9">
+            <h2>9. Sobrevivendo ao Caos</h2>
+            <p>My Summer Car é um jogo desafiador e realista. Você nunca sabe o que vai acontecer. O caos está sempre presente. No entanto, com paciência, prática e dedicação, você será capaz de montar e dirigir seu carro com sucesso, sobreviver às necessidades do personagem e dominar as várias tarefas de mecânica e condução. Não desista e aproveite a experiência única do jogo.</p>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 - Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <script>
+        const themeButton = document.getElementById('theme-toggle');
+        themeButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            document.querySelector('.container').classList.toggle('dark-mode');
+            themeButton.classList.toggle('dark-mode');
         });
+
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
     </script>
 </body>
 </html>
