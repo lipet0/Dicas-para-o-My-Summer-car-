@@ -95,10 +95,42 @@
             color: #333;
         }
 
+        /* Estilo para os novos botões */
+        .action-buttons {
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .action-buttons button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .action-buttons button:hover {
+            background-color: #555;
+        }
+
     </style>
 </head>
 <body>
     <button id="theme-toggle">Alternar Tema</button>
+
+    <!-- Novos botões -->
+    <div class="action-buttons">
+        <button onclick="alert('Botão 1 clicado')">Botão 1</button>
+        <button onclick="alert('Botão 2 clicado')">Botão 2</button>
+        <button onclick="alert('Botão 3 clicado')">Botão 3</button>
+    </div>
+
     <img id="top-image" src="imagens/0.jpg" alt="Imagem do topo">
     <div class="container">
         <h1>My Summer Car: Guia Completo para Iniciantes</h1>
@@ -137,7 +169,7 @@
         <img class="guide-images" src="imagens/9.jpg" alt="Sobrevivendo ao Caos">
     </div>
     <footer>
-        <button class="button" onclick="window.location.href = 'https://wa.me/5531999999999';">Fale no WhatsApp</button>
+        <button class="button" onclick="window.location.href = 'https://wa.me/5511967339208';">Fale no WhatsApp</button>
     </footer>
     <script>
         const themeToggle = document.getElementById('theme-toggle');
