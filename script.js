@@ -7,7 +7,7 @@ const whatsappButton = document.querySelector('.whatsapp-btn');  // Alterado de 
 
 whatsappButton.addEventListener('click', function() {
   const phoneNumber = '5511967339208';
-    const message = encodeURIComponent('Olá, gostaria de saber mais informações!');
+    const message = encodeURIComponent('Tire suas dúvidas comigo');
     const url = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(url, '_blank'); // Abre o link em uma nova janela
 });
