@@ -141,3 +141,23 @@ h1, h2 {
 .whatsapp-btn:focus {
   outline: none;
 }
+
+/* Estilizando o rodapé */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+  border-top: 1px solid #444;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Suavizando a transição */
+}
+
+/* Rodapé no tema escuro */
+body.dark-theme footer {
+  background-color: #1f1f1f;
+  color: #e0e0e0;
+}
