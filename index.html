@@ -4,65 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Summer Car: Guia Completo para Iniciantes</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Adicionando o link para o arquivo CSS -->
     <style>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dicas para o My Summer Car</title>
-<link rel="stylesheet" href="style.css">
-
-</head>
-
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f9;
+            transition: background-color 0.3s, color 0.3s;
         }
+
         .container {
             max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
             background-color: #ffffff;
+            transition: background-color 0.3s, color 0.3s;
         }
+
         h1, h2 {
             color: #333;
             margin-top: 30px;
             margin-bottom: 15px;
         }
+
         p, ul {
             color: #666;
             line-height: 1.6;
             margin-bottom: 20px;
         }
+
         .tip-title {
             font-weight: bold;
         }
+
         footer {
             text-align: center;
             margin-top: 30px;
         }
+
         footer .button {
             margin: 5px;
         }
+
         img {
             max-width: 100%;
             height: auto;
             margin-bottom: 30px;
         }
+
         #top-image {
             width: 100%;
             height: 400px;
             object-fit: cover;
         }
+
         /* Ajustando as imagens de 2 a 9 para o mesmo tamanho de 1.jpg */
         .guide-images {
             width: 100%;
             height: 400px;
             object-fit: cover;
         }
+
+        /* Tema escuro */
+        body.dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .container.dark-mode {
+            background-color: #444;
+        }
+
+        /* Estilo do botão de alternância */
+        #theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        #theme-toggle.dark-mode {
+            background-color: #fff;
+            color: #333;
+        }
+
     </style>
 </head>
 <body>
+    <button id="theme-toggle">Alternar Tema</button>
     <img id="top-image" src="imagens/0.jpg" alt="Imagem do topo">
     <div class="container">
         <h1>My Summer Car: Guia Completo para Iniciantes</h1>
@@ -100,14 +136,22 @@
         <p>Entre a manutenção do carro, os compromissos com trabalhos, as viagens até a cidade e as necessidades básicas do personagem, manter tudo sob controle se torna um desafio diário. Há sempre algo a fazer: trocar óleo, abastecer, pagar contas, limpar a casa, trocar o filtro de ar, consertar a bicicleta, ou mesmo escapar de vizinhos irritantes. Cada detalhe conta. Sobreviver em My Summer Car é quase como viver uma segunda vida — uma vida bagunçada, perigosa, mas extremamente divertida e recompensadora.</p>
         <img class="guide-images" src="imagens/9.jpg" alt="Sobrevivendo ao Caos">
         <h2 id="bottom">Conclusão</h2>
-        <p><strong>My Summer Car</strong> é mais que um simulador de carro — é um retrato da vida real, com todas as suas frustrações, conquistas e absurdos. Para quem gosta de jogos desafiadores, cheios de possibilidades e com liberdade total, este título é uma verdadeira joia. Dominar o jogo exige tempo e persistência, mas a recompensa é imensa. Quando ouvir o motor do Satsuma funcionando pela primeira vez após semanas de tentativa, entenderá o valor de cada esforço. Boa sorte — e tente não morrer!</p>
+        <p><strong>My Summer Car</strong> é mais que um simulador de carro — é um retrato da vida real, com todas as suas frustrações, conquistas e absurdos. Para quem gosta de jogos desafiadores, cheios de possibilidades e com liberdade total, este título é uma verdadeira joia. Dominar o jogo exige tempo e persistência, mas a recompensa de ver seu Satsuma rodando perfeitamente vale cada esforço.</p>
     </div>
 
     <footer>
-    <div style="display: flex; justify-content: center; margin-top: 30px;">
-        <a href="https://wa.me/5511967339208" target="_blank" style="background-color: #25D366; color: white; border-radius: 5px; padding: 12px 20px; font-size: 16px; display: flex; align-items: center; text-decoration: none; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 20px; height: 20px; margin-right: 10px;">
-            Fale comigo no WhatsApp
-        </a>
-    </div>
-</footer>
+        <button class="button" onclick="window.location.href='https://www.example.com'">Página Inicial</button>
+    </footer>
+
+    <script>
+        // Alternância de tema
+        const themeToggle = document.getElementById('theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            document.querySelector('.container').classList.toggle('dark-mode');
+            themeToggle.classList.toggle('dark-mode');
+            themeToggle.textContent = document.body.classList.contains('dark-mode') ? 'Tema Claro' : 'Tema Escuro';
+        });
+    </script>
+</body>
+</html>
