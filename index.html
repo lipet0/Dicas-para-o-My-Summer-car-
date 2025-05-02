@@ -59,12 +59,14 @@
             object-fit: cover;
         }
 
+        /* Ajustando as imagens de 2 a 9 para o mesmo tamanho de 1.jpg */
         .guide-images {
             width: 100%;
             height: 400px;
             object-fit: cover;
         }
 
+        /* Tema escuro */
         body.dark-mode {
             background-color: #333;
             color: #fff;
@@ -74,6 +76,7 @@
             background-color: #444;
         }
 
+        /* Estilo do botão de alternância */
         #theme-toggle {
             position: fixed;
             top: 20px;
@@ -92,6 +95,7 @@
             color: #333;
         }
 
+        /* Estilo dos botões para alternar entre as seções */
         .section-toggle-btns {
             position: fixed;
             top: 80px;
@@ -124,18 +128,7 @@
 </head>
 <body>
     <button id="theme-toggle">Alternar Tema</button>
-    
-    <!-- Botões para alternar entre as seções -->
-    <div class="section-toggle-btns">
-        <button onclick="scrollToSection('section-1')">1. Primeiros Passos</button>
-        <button onclick="scrollToSection('section-2')">2. Montagem do Carro</button>
-        <button onclick="scrollToSection('section-3')">3. Manutenção e Sobrevivência</button>
-        <button onclick="scrollToSection('section-4')">4. Trabalhos e Grana</button>
-        <button onclick="scrollToSection('section-5')">5. Dicas Rápidas</button>
-        <button onclick="scrollToSection('section-6')">6. Dirigindo por aí</button>
-        <button onclick="scrollToSection('section-7')">7. Personalizando o Satsuma</button>
-        <button onclick="scrollToSection('section-8')">8. Aumentando sua habilidade de mecânica</button>
-        <button onclick="scrollToSection('section-9')">9. Sobrevivendo ao Caos</button>
+
     </div>
     
     <img id="top-image" src="imagens/0.jpg" alt="Imagem do topo">
@@ -173,49 +166,68 @@
             <ul>
                 <li><strong class="tip-title">Salve o jogo:</strong> Use o banheiro para salvar. Salvar após conquistas importantes evita frustrações.</li>
                 <li><strong class="tip-title">Evite morrer:</strong> Não coma comidas estragadas, não durma no meio da estrada, e não dirija bêbado.</li>
-                <li><strong class="tip-title">Atenção à saúde do carro:</strong> Verifique sempre o nível de óleo, combustível e outras necessidades do Satsuma.</li>
-                <li><strong class="tip-title">Evite tráfego:</strong> Dirija em horários tranquilos, como à noite, quando as ruas estão vazias.</li>
+                <li><strong class="tip-title">Fique atento ao inventário:</strong> Carregue chaves de boca, óleo, gasolina e peças de reposição quando for longe.</li>
+                <li><strong class="tip-title">Estude a mecânica:</strong> Saber como funciona um motor é quase obrigatório para jogar bem. Pesquise fora do jogo se necessário.</li>
             </ul>
-            <img class="guide-images" src="imagens/6.jpg" alt="Dicas Rápidas">
-        </div>
+            <img class="guide-images" src="imagens/5.jpg" alt="Dicas Rápidas">
+                </div>
 
         <div id="section-6">
-            <h2>6. Dirigindo por aí</h2>
-            <p>Dirigir no jogo pode ser um desafio, principalmente pela física realista e pelas condições do veículo. O Satsuma não é exatamente um carro de corrida e pode falhar a qualquer momento se não for bem mantido. Comece devagar, praticando antes de se aventurar por trajetos mais longos. Evite descer montanhas rápidas, pois o carro pode capotar. Além disso, sempre mantenha combustível e óleo em níveis adequados. A gasolina pode acabar a qualquer momento, e sem combustível, você estará na mão. E não se esqueça de utilizar o cinto de segurança, se você conseguir!</p>
-            <img class="guide-images" src="imagens/7.jpg" alt="Dirigindo por aí">
+            <h2>6. Dirigindo por Aí</h2>
+            <p>Dirigir é uma parte fundamental da experiência. A direção é realista, sem assistência de volante ou GPS. Para os iniciantes, pode ser difícil manter o controle, mas com prática, você vai se acostumar. O carro tem uma velocidade razoável, mas é importante sempre checar o nível de combustível. Também é essencial saber quando parar para descansar e não exagerar nas longas viagens sem abastecer.</p>
+            <img class="guide-images" src="imagens/6.jpg" alt="Dirigindo por aí">
         </div>
 
         <div id="section-7">
             <h2>7. Personalizando o Satsuma</h2>
-            <p>Você pode modificar o Satsuma com diversos acessórios, peças e tintas. Desde adicionar um novo sistema de suspensão até trocar a cor da pintura, o carro fica totalmente personalizável. Além disso, você pode alterar os detalhes do motor, como filtro de ar e escapamento. Teste diferentes combinações até encontrar o carro perfeito para o seu estilo de direção. E, claro, não se esqueça de verificar as peças novas enquanto dirige: elas podem cair do carro se não forem bem fixadas!</p>
-            <img class="guide-images" src="imagens/8.jpg" alt="Personalizando o Satsuma">
+            <p>O Satsuma pode ser customizado de diversas maneiras, como aparência externa, suspensão, motor e mais. A personalização vai desde a troca de peças para melhorar o desempenho, até a pintura do carro. A estética é importante não só para seu gosto pessoal, mas também para o jogo em si — muitas vezes, é necessário andar com o carro bem ajustado para concluir missões com sucesso.</p>
+            <img class="guide-images" src="imagens/7.jpg" alt="Personalizando o Satsuma">
         </div>
 
         <div id="section-8">
-            <h2>8. Aumentando sua habilidade de mecânica</h2>
-            <p>A mecânica é a chave do jogo. Aprenda a trabalhar com as ferramentas, desmontar e montar peças de carros, e você se tornará um mestre. Comece praticando no Satsuma antes de tentar modificar outros carros. As ferramentas podem ser compradas ou encontradas pela casa ou no campo. Tenha sempre um kit básico à mão para consertos rápidos.</p>
-            <img class="guide-images" src="imagens/9.jpg" alt="Aumentando sua habilidade de mecânica">
+            <h2>8. Aumentando sua Habilidade de Mecânica</h2>
+            <p>Para realizar uma boa montagem do carro, você precisa aumentar sua habilidade mecânica. Pratique mais, aprenda com os erros e acertos, e busque eficiência no trabalho. Quanto mais você aprende, mais peças pode substituir e mais facilmente consegue reparar o carro sem causar danos.</p>
+            <img class="guide-images" src="imagens/8.jpg" alt="Aumentando sua habilidade de mecânica">
         </div>
 
         <div id="section-9">
             <h2>9. Sobrevivendo ao Caos</h2>
-            <p>Em *My Summer Car*, a sobrevivência vai além da mecânica e da manutenção do carro. A luta contra o caos e o absurdo da vida finlandesa é diária. Esteja preparado para situações inesperadas, como animais na estrada, sabotagem de outros personagens e falhas mecânicas. O jogo não perdoa os desleixados, e a morte pode ser apenas um acidente de percurso — literalmente.</p>
-            <img class="guide-images" src="imagens/11.jpg" alt="Sobrevivendo ao Caos">
-        </div>
+          <p>My Summer Car não é para qualquer um. É um jogo de paciência, aprendizado e adaptação. Pode ser frustrante, mas as recompensas de ver seu Satsuma rodando perfeitamente ou concluir um trabalho com sucesso fazem tudo valer a pena. Aproveite a jornada, e sempre tenha em mente que, no final, o caos é parte da diversão. Boa sorte e que a força do motor esteja com você!</p>
+        <img class="guide-images" src="imagens/9.jpg" alt="Sobrevivendo ao Caos">
     </div>
-</body>
-<script>
-    // Função para alternar entre temas
-    const themeButton = document.getElementById('theme-toggle');
-    themeButton.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-        document.querySelector('.container').classList.toggle('dark-mode');
-        themeButton.classList.toggle('dark-mode');
-    });
 
-    // Função para rolar para as seções
-    function scrollToSection(sectionId) {
-        document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
-    }
-</script>
+        <h2>Conclusão</h2>
+<p>
+  <strong>My Summer Car</strong> é mais que um simulador de carro — é um retrato da vida real, com todas as suas frustrações, conquistas e absurdos.
+  Para quem gosta de jogos desafiadores, cheios de possibilidades e com liberdade total, este título é uma verdadeira joia.
+  Dominar o jogo exige tempo e persistência, mas a recompensa é imensa.
+  Quando ouvir o motor do Satsuma funcionando pela primeira vez após semanas de tentativa, entenderá o valor de cada esforço.
+  Boa sorte — e tente não morrer!
+</p>
+
+    <footer>
+   <a class="whatsapp-btn" href="https://wa.me/5511967339208" target="_blank" rel="noopener noreferrer">
+  <img src="https://img.icons8.com/ios-filled/24/ffffff/whatsapp.png" alt="WhatsApp">
+  Fale comigo no WhatsApp
+</a>
+
+
+            <p>&copy; 2025 - Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <script>
+        const themeButton = document.getElementById('theme-toggle');
+        themeButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            document.querySelector('.container').classList.toggle('dark-mode');
+            themeButton.classList.toggle('dark-mode');
+        });
+
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
 </html>
+
