@@ -1,0 +1,54 @@
+﻿/* Resetando margens e padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Definindo uma fonte */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Ajustando o cabeçalho */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* Estilizando os links */
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* Melhorando a exibição das imagens */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Layout de coluna para dispositivos pequenos */
+.container {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividade: layout em coluna para celulares */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+  header {
+    font-size: 18px;
+  }
+}
