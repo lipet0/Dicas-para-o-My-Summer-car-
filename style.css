@@ -113,4 +113,12 @@ h1, h2 {
 
 .whatsapp-btn:focus {
   outline: none;
+  .whatsapp-button {
+  transition: transform 0.3s ease-in-out;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1); /* Aumenta o botão ao passar o mouse */
+}
+
 }
