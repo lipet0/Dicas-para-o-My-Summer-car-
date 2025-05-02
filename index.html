@@ -133,31 +133,22 @@
         <p>Com o tempo, você ficará mais rápido na montagem, saberá onde vai cada parafuso e identificará problemas rapidamente. Também desenvolverá estratégias próprias para organizar as peças e otimizar o tempo. Alguns jogadores chegam a montar o carro inteiro em um único dia no jogo. Estude, experimente, e não tenha medo de errar. A frustração faz parte do aprendizado — cada falha te aproxima da maestria.</p>
         <img class="guide-images" src="imagens/8.jpg" alt="Aumentando a habilidade de mecânica">
         <h2>9. Sobrevivendo ao Caos</h2>
-        <p>Entre a manutenção do carro, os compromissos com trabalhos, as viagens até a cidade e as necessidades básicas do personagem, manter tudo sob controle se torna um desafio diário. Há sempre algo a fazer: trocar óleo, abastecer, pagar contas, limpar a casa, trocar o filtro de ar, consertar a bicicleta, ou mesmo escapar de vizinhos irritantes. Cada detalhe conta. Sobreviver em My Summer Car é quase como viver uma segunda vida — uma vida bagunçada, perigosa, mas extremamente divertida e recompensadora.</p>
+        <p>My Summer Car não é para qualquer um. É um jogo de paciência, aprendizado e adaptação. Pode ser frustrante, mas as recompensas de ver seu Satsuma rodando perfeitamente ou concluir um trabalho com sucesso fazem tudo valer a pena. Aproveite a jornada, e sempre tenha em mente que, no final, o caos é parte da diversão. Boa sorte e que a força do motor esteja com você!</p>
         <img class="guide-images" src="imagens/9.jpg" alt="Sobrevivendo ao Caos">
-        <h2 id="bottom">Conclusão</h2>
-        <p><strong>My Summer Car</strong> é mais que um simulador de carro — é um retrato da vida real, com todas as suas frustrações, conquistas e absurdos. Para quem gosta de jogos desafiadores, cheios de possibilidades e com liberdade total, este título é uma verdadeira joia. Dominar o jogo exige tempo e persistência, mas a recompensa de ver seu Satsuma rodando perfeitamente vale cada esforço.</p>
     </div>
-
     <footer>
-<a href="https://wa.me/5511967339208" target="_blank" class="whatsapp-btn">
-  <img src="whatsapp-icon.png" alt="WhatsApp" class="whatsapp-icon">
-  Tire suas dúvidas comigo
-</a>
-</button>
-
-</a>
-
+        <button class="button" onclick="window.location.href = 'https://wa.me/5531999999999';">Fale no WhatsApp</button>
     </footer>
-
     <script>
-        // Alternância de tema
         const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        const container = document.querySelector('.container');
+
         themeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            document.querySelector('.container').classList.toggle('dark-mode');
+            body.classList.toggle('dark-mode');
+            container.classList.toggle('dark-mode');
             themeToggle.classList.toggle('dark-mode');
-            themeToggle.textContent = document.body.classList.contains('dark-mode') ? 'Tema Claro' : 'Tema Escuro';
+            themeToggle.textContent = body.classList.contains('dark-mode') ? 'Alternar para Tema Claro' : 'Alternar Tema';
         });
     </script>
 </body>
