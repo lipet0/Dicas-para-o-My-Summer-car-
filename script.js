@@ -1,13 +1,34 @@
-const button = document.getElementById('themeToggle');
-button.addEventListener('click', () => {
-  document.body.classList.toggle('dark-theme');
-});
+// Função para alternar entre os temas
+function toggleTheme() {
+  const body = document.body;
+  const currentTheme = body.classList.contains('dark-theme') ? 'dark' : 'light';
+  
+  // Alterna entre os temas
+  if (currentTheme === 'dark') {
+    body.classList.remove('dark-theme');
+    body.classList.add('light-theme');
+    localStorage.setItem('theme', 'light'); // Salva a preferência
+  } else {
+    body.classList.remove('light-theme');
+    body.classList.add('dark-theme');
+    localStorage.setItem('theme', 'dark'); // Salva a preferência
+  }
+}
 
-const whatsappButton = document.querySelector('.whatsapp-btn');
+// Verificar a preferência de tema salva no localStorage
+function loadTheme() {
+  const savedTheme = localStorage.getItem('theme');
+  const body = document.body;
+  
+  if (savedTheme === 'dark') {
+    body.classList.add('dark-theme');
+  } else {
+    body.classList.add('light-theme');
+  }
+}
 
-whatsappButton.addEventListener('click', function() {
-    const phoneNumber = '5511967339208'; // Número com código do país
-    const message = encodeURIComponent('Tire suas dúvidas comigo');
-    const url = `https://wa.me/${phoneNumber}?text=${message}`;
-    window.open(url, '_blank'); // Abre o link em uma nova janela
-});
+// Chama a função para carregar o tema assim que a página for carregada
+loadTheme();
+
+// Suponha que você tenha um botão para alternar entre os temas
+document.getElementById('theme-toggle-btn').addEventListener('click', toggleTheme);
