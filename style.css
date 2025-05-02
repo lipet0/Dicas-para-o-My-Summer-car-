@@ -12,6 +12,7 @@ body {
   background-color: #f4f4f4;
   color: #333;
   font-size: 18px; /* Melhorando o tamanho da fonte */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Suavizando a transição de tema */
 }
 
 /* Tema Claro */
@@ -35,6 +36,7 @@ header {
   font-size: 22px;
   font-weight: bold;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra no texto */
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Ajustando o cabeçalho para o tema escuro */
@@ -47,6 +49,7 @@ body.dark-theme header {
 a {
   color: #333;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 /* Estilizando os links no tema escuro */
@@ -77,6 +80,7 @@ img:hover {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease; /* Suavizando a transição */
 }
 
 /* Ajustando o fundo da área principal (container) para o tema escuro */
@@ -107,6 +111,7 @@ h1, h2 {
   font-family: 'Roboto', sans-serif; /* Fonte mais moderna */
   font-weight: bold;
   text-transform: uppercase; /* Aplicando transformação para maiúsculas */
+  letter-spacing: 2px; /* Aumentando o espaçamento entre as letras */
 }
 
 /* Estilizando o botão do WhatsApp */
@@ -127,16 +132,12 @@ h1, h2 {
   font-weight: bold;
 }
 
+/* Efeito de transição e aumento no botão */
 .whatsapp-btn:hover {
   background-color: #1ebe5d; /* Verde um pouco mais escuro */
+  transform: scale(1.1); /* Aumenta o botão ao passar o mouse */
 }
 
 .whatsapp-btn:focus {
   outline: none;
-}
-
-
-/* Efeito de transição e aumento no botão */
-.whatsapp-btn:hover {
-  transform: scale(1.1); /* Aumenta o botão ao passar o mouse */
 }
