@@ -161,3 +161,71 @@ body.dark-theme footer {
   background-color: #1f1f1f;
   color: #e0e0e0;
 }
+
+/* Estilo para os novos botões */
+.action-buttons {
+  position: fixed;
+  top: 80px;  /* Ajuste a posição vertical conforme necessário */
+  right: 20px; /* Posição à direita */
+  display: flex;
+  flex-direction: column;  /* Alinhando os botões em uma coluna */
+  gap: 10px;  /* Espaçamento entre os botões */
+  z-index: 1000;  /* Para garantir que fiquem sobre outros elementos */
+}
+
+.action-buttons button {
+  background-color: #333;  /* Cor de fundo inicial */
+  color: white;  /* Cor do texto */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;  /* Suaviza as transições */
+}
+
+/* Efeito hover para os botões */
+.action-buttons button:hover {
+  background-color: #555;  /* Cor mais clara ao passar o mouse */
+  transform: translateY(-2px);  /* Pequeno movimento para dar um efeito visual */
+}
+
+/* Ajuste para o modo escuro */
+body.dark-theme .action-buttons button {
+  background-color: #fff;  /* Cor de fundo para o modo escuro */
+  color: #333;  /* Cor do texto no modo escuro */
+}
+
+body.dark-theme .action-buttons button:hover {
+  background-color: #ddd;  /* Cor mais clara para o hover no modo escuro */
+}
+
+/* Estilo do botão de alternância de tema */
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  z-index: 1001;  /* Garantir que o botão de tema fique acima */
+}
+
+#theme-toggle.dark-theme {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Transição para o modo escuro */
+body.dark-theme {
+  background-color: #333;
+  color: #fff;
+}
+
+.container.dark-theme {
+  background-color: #444;
+}
