@@ -1,248 +1,185 @@
-/* Resetando margens e padding */ 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* Definindo uma fonte */
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
-  font-size: 18px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
+/* My Summer Car Guide Design System */
 
-/* Tema Claro */
-body.light-theme {
-  background-color: #fff;
-  color: #333;
-}
+@layer base {
+  :root {
+    /* Core palette inspired by Finnish summer and automotive theme */
+    --background: 210 20% 96%;
+    --foreground: 220 30% 15%;
 
-/* Tema Escuro */
-body.dark-theme {
-  background-color: #121212;
-  color: #e0e0e0;
-}
+    --card: 0 0% 100%;
+    --card-foreground: 220 30% 15%;
 
-/* Ajustando o cabeçalho */
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 10px 0;
-  text-align: center;
-  font-size: 22px;
-  font-weight: bold;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 30% 15%;
 
-/* Ajustando o cabeçalho para o tema escuro */
-body.dark-theme header {
-  background-color: #1f1f1f;
-  color: #e0e0e0;
-}
+    /* Finnish flag blue as primary */
+    --primary: 214 95% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 214 95% 65%;
 
-/* Estilizando os links */
-a {
-  color: #333;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
+    /* Automotive silver/gray */
+    --secondary: 210 15% 88%;
+    --secondary-foreground: 220 30% 15%;
 
-/* Estilizando os links no tema escuro */
-body.dark-theme a {
-  color: #80cbc4;
-}
+    /* Muted summer tones */
+    --muted: 210 15% 92%;
+    --muted-foreground: 220 15% 45%;
 
-/* Melhorando a exibição das imagens */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 20px auto;
-  border-radius: 8px;
-  transition: transform 0.3s ease-in-out;
-}
+    /* Summer accent - warm orange */
+    --accent: 25 85% 60%;
+    --accent-foreground: 0 0% 100%;
 
-/* Efeito de zoom nas imagens */
-img:hover {
-  transform: scale(1.05);
-}
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-/* Layout de coluna para dispositivos pequenos */
-.container {
-  width: 80%;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
+    --border: 210 15% 85%;
+    --input: 210 15% 85%;
+    --ring: 214 95% 45%;
 
-/* Ajustando o fundo da área principal (container) para o tema escuro */
-body.dark-theme .container {
-  background-color: #2c2c2c;
-  color: #e0e0e0;
-}
+    --radius: 0.75rem;
 
-/* Responsividade: layout em coluna para celulares */
-@media screen and (max-width: 768px) {
-  .container {
-    width: 95%;
+    /* Sidebar styling */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 220 30% 15%;
+    --sidebar-primary: 214 95% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 15% 95%;
+    --sidebar-accent-foreground: 220 30% 15%;
+    --sidebar-border: 210 15% 90%;
+    --sidebar-ring: 214 95% 45%;
+
+    /* Custom design tokens for guide */
+    --hero-gradient: linear-gradient(135deg, hsl(214 95% 45%) 0%, hsl(25 85% 60%) 100%);
+    --card-shadow: 0 4px 20px hsl(220 30% 15% / 0.1);
+    --card-shadow-hover: 0 8px 30px hsl(220 30% 15% / 0.15);
+    --text-shadow: 0 1px 2px hsl(220 30% 15% / 0.1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
-  header {
-    font-size: 18px;
+
+  .dark {
+    /* Dark theme with Finnish midnight blue */
+    --background: 220 25% 8%;
+    --foreground: 210 40% 95%;
+
+    --card: 220 25% 12%;
+    --card-foreground: 210 40% 95%;
+
+    --popover: 220 25% 12%;
+    --popover-foreground: 210 40% 95%;
+
+    --primary: 214 85% 55%;
+    --primary-foreground: 220 25% 8%;
+    --primary-glow: 214 85% 70%;
+
+    --secondary: 220 15% 18%;
+    --secondary-foreground: 210 40% 95%;
+
+    --muted: 220 15% 15%;
+    --muted-foreground: 220 15% 65%;
+
+    --accent: 25 75% 55%;
+    --accent-foreground: 220 25% 8%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 210 40% 95%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 214 85% 55%;
+
+    --sidebar-background: 220 25% 10%;
+    --sidebar-foreground: 210 40% 95%;
+    --sidebar-primary: 214 85% 55%;
+    --sidebar-primary-foreground: 220 25% 8%;
+    --sidebar-accent: 220 15% 15%;
+    --sidebar-accent-foreground: 210 40% 95%;
+    --sidebar-border: 220 15% 18%;
+    --sidebar-ring: 214 85% 55%;
+
+    /* Dark theme gradients */
+    --hero-gradient: linear-gradient(135deg, hsl(214 85% 55%) 0%, hsl(25 75% 55%) 100%);
+    --card-shadow: 0 4px 20px hsl(0 0% 0% / 0.3);
+    --card-shadow-hover: 0 8px 30px hsl(0 0% 0% / 0.4);
   }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Improved focus styles for accessibility */
+  *:focus-visible {
+    @apply ring-2 ring-ring ring-offset-2 ring-offset-background outline-none;
+  }
+
+  /* Responsive typography */
+  .prose {
+    @apply text-foreground;
+  }
+
+  .prose p {
+    @apply text-muted-foreground leading-relaxed mb-4;
+  }
+
+  .prose strong {
+    @apply text-foreground font-semibold;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/50 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/70;
+  }
+
+  /* Image optimization for local assets */
   img {
-    margin-bottom: 10px;
-  }
-  .container h2 {
-    font-size: 24px;
-    text-align: center;
-  }
-}
-
-/* Melhorias nas fontes e efeitos visuais */
-h1, h2 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-/* Estilizando o botão do WhatsApp */
-.whatsapp-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background-color: #25D366; /* Cor verde do WhatsApp */
-  color: #fff; /* Cor do texto */
-  font-size: 16px;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* Efeito de transição e aumento no botão */
-.whatsapp-btn:hover {
-  background-color: #1ebe5d; /* Cor mais clara para hover */
-  transform: scale(1.1);
-}
-
-.whatsapp-btn:focus {
-  outline: none;
-}
-
-
-/* Estilizando o rodapé */
-footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 10px 0;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  font-size: 14px;
-  border-top: 1px solid #444;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Rodapé no tema escuro */
-body.dark-theme footer {
-  background-color: #1f1f1f;
-  color: #e0e0e0;
-}
-
-/* Estilo para os novos botões na parte inferior */
-.action-buttons {
-  position: fixed;
-  bottom: 20px; /* Posicionando os botões na parte inferior */
-  left: 50%; /* Centralizando horizontalmente */
-  transform: translateX(-50%); /* Ajuste para centralizar */
-  display: flex;
-  flex-direction: row; /* Organizando os botões na horizontal */
-  gap: 10px;
-  z-index: 1000;
-}
-
-.action-buttons button {
-  background-color: transparent;
-  color: #333;
-  border: 2px solid #333;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 16px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-}
-
-.action-buttons button:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-  transform: translateY(-2px);
-}
-
-/* Ajuste para o modo escuro */
-body.dark-theme .action-buttons button {
-  background-color: transparent;
-  color: #fff;
-  border: 2px solid #fff;
-}
-
-body.dark-theme .action-buttons button:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* Estilo do botão de alternância de tema */
-#theme-toggle {
-  position: fixed;
-  bottom: 20px; /* Posicionando na parte inferior */
-  left: 50%;
-  transform: translateX(-50%); /* Centralizando horizontalmente */
-  background-color: #333;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 16px;
-  border-radius: 5px;
-  z-index: 1001;
-}
-
-#theme-toggle.dark-theme {
-  background-color: #fff;
-  color: #333;
-}
-
-/* Responsividade para dispositivos móveis */
-@media screen and (max-width: 768px) {
-  .action-buttons {
-    bottom: 10px; /* Distância menor da parte inferior para telas pequenas */
-    left: 50%;
-    transform: translateX(-50%);
-    flex-direction: row;
-    gap: 5px;
+    @apply max-w-full h-auto;
   }
 
-  .action-buttons button {
-    padding: 8px 15px;
-    font-size: 14px;
+  /* Guide specific styles for better compatibility */
+  .guide-section {
+    @apply space-y-6;
   }
 
-  #theme-toggle {
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 8px 15px;
-    font-size: 14px;
+  .guide-section img {
+    @apply w-full h-64 md:h-80 lg:h-96 object-cover rounded-lg shadow-card;
+  }
+
+  /* Ensure WhatsApp button compatibility */
+  .whatsapp-button {
+    @apply inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#22BF5A] text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:scale-105 shadow-lg;
+  }
+
+  /* Tip list styling */
+  .tip-item {
+    @apply border-l-4 border-primary bg-card p-4 rounded-r-lg shadow-sm hover:shadow-md transition-shadow duration-300;
+  }
+
+  .tip-title {
+    @apply font-semibold text-foreground mb-2 block;
   }
 }
