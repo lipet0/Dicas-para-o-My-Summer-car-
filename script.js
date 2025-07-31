@@ -1,16 +1,14 @@
 // Função para alternar entre os temas
 function toggleTheme() {
   const body = document.body;
-  const currentTheme = body.classList.contains('dark-theme') ? 'dark' : 'light';
+  const currentTheme = body.classList.contains('dark') ? 'dark' : 'light';
   
   // Alterna entre os temas
   if (currentTheme === 'dark') {
-    body.classList.remove('dark-theme');
-    body.classList.add('light-theme');
+    body.classList.remove('dark');
     localStorage.setItem('theme', 'light'); // Salva a preferência
   } else {
-    body.classList.remove('light-theme');
-    body.classList.add('dark-theme');
+    body.classList.add('dark');
     localStorage.setItem('theme', 'dark'); // Salva a preferência
   }
 }
@@ -21,29 +19,39 @@ function loadTheme() {
   const body = document.body;
   
   if (savedTheme === 'dark') {
-    body.classList.add('dark-theme');
+    body.classList.add('dark');
   } else {
-    body.classList.add('light-theme');
+    body.classList.remove('dark');
   }
 }
 
 // Chama a função para carregar o tema assim que a página for carregada
 loadTheme();
 
-// Suponha que você tenha um botão para alternar entre os temas
-document.getElementById('theme-toggle-btn').addEventListener('click', toggleTheme);
+// Event listener para o botão de alternância do tema
+document.addEventListener('DOMContentLoaded', function() {
+  const themeToggleBtn = document.getElementById('theme-toggle');
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', toggleTheme);
+  }
+});
 
 // Código para navegação suave
-const buttons = document.querySelectorAll('.navigate-btn');
+document.addEventListener('DOMContentLoaded', function() {
+  const buttons = document.querySelectorAll('.navigate-btn');
 
-// Adicionar o evento de clique para cada botão
-buttons.forEach(button => {
-  button.addEventListener('click', () => {
-    // Pegar o alvo do botão
-    const targetId = button.getAttribute('data-target');
-    
-    // Encontrar o elemento de destino (div) e rolar até ele
-    const targetElement = document.getElementById(targetId);
-    targetElement.scrollIntoView({ behavior: 'smooth' });
+  // Adicionar o evento de clique para cada botão
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Pegar o alvo do botão
+      const targetId = button.getAttribute('data-target');
+      
+      // Encontrar o elemento de destino (div) e rolar até ele
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
   });
 });
+
